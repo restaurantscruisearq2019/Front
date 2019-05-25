@@ -12,7 +12,7 @@ import Footer from "./Footer";
 
 const App = () => {
   return (
-    <div className="ui container">
+    <div>
       <Router history={history}>
         <div>
           <Menu />
