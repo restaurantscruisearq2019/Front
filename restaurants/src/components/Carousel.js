@@ -1,9 +1,18 @@
 import React from "react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-class Carousel extends React.Component {
-  render() {
-    return <div>Carrousel</div>;
-  }
-}
-
-export default Carousel;
+export default () => (
+  <Carousel autoPlay showThumbs={false}>
+    <div>
+      <img src="http://gloriosa.demo.weebpal.com/sites/default/files/banner/image/banner%20dining%202.jpg" />
+      {/* <p className="legend">Legend 1</p> */}
+    </div>
+    <div>
+      <img src="http://gloriosa.demo.weebpal.com/sites/default/files/banner/image/Dining_03.png" />
+    </div>
+    <div>
+      <img src="http://gloriosa.demo.weebpal.com/sites/default/files/banner/image/banner%20dining%201.jpg" />
+    </div>
+  </Carousel>
+);
