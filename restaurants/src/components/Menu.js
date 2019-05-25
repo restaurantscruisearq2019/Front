@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 class Menu extends React.Component {
   render() {
     return (
-      <div className="ui grey inverted stackable large fixed menu">
+      <div className="ui grey inverted stackable large fixed top menu">
         <Link to="/restaurants">
           <a className="item">Restaurants</a>
         </Link>
