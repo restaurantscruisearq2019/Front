@@ -4,10 +4,16 @@ import { Link } from "react-router-dom";
 class Menu extends React.Component {
   render() {
     return (
-      <div className="ui grey inverted vertical segment">
-        <div className="ui grey inverted stackable massive  menu">
+      <div className="ui inverted vertical segment">
+        <div className="ui inverted stackable massive  menu">
+          <Link to="/">
+            <a className="item">Home</a>
+          </Link>
           <Link to="/restaurants">
             <a className="item">Restaurants</a>
+          </Link>
+          <Link to="/schedule">
+            <a className="item">Schedule</a>
           </Link>
           <Link to="/reservations">
             <a className="item"> Reservation </a>
