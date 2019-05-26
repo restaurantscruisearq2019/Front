@@ -1,9 +1,18 @@
-body > .grid {
+#reservationgrid {
   height: 100%;
 }
-.image {
-  margin-top: -100px;
-}
-.column {
+#reservationcolumn {
   max-width: 450px;
+}
+
+body {
+  height: 100%;
+}
+
+.body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
 }
