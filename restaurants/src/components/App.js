@@ -12,9 +12,9 @@ import Footer from "./Footer";
 
 const App = () => {
   return (
-    <div>
+    <div className="body">
       <Router history={history}>
-        <div>
+        <div className="body">
           <Menu />
           <Switch>
             <Route path="/" exact component={LandingPage} />
