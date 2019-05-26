@@ -7,7 +7,7 @@ class RestaurantsPage extends React.Component {
         <div class="ui equal width stackable internally celled grid">
           <div class="center aligned row">
             <div class="column">
-            <a href="#">
+            <a href="see">
               <img src="https://images.unsplash.com/photo-1428515613728-6b4607e44363?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" class="ui image"/>  
               <br></br>
               <h3 className="ui header">See Our Restaurants!</h3>
@@ -27,14 +27,14 @@ class RestaurantsPage extends React.Component {
         <div class="ui equal width stackable grid">
           <div class="center aligned row">
             <div class="column">
-            <a href="#">
+            <a href="menus">
               <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" class="ui image"/>  
               <br></br>
               <h3 className="ui header">Menus</h3>
             </a>
             </div>
             <div class="column">
-              <a href="#">
+              <a href="prices">
                 <img src="https://images.unsplash.com/photo-1556742393-d75f468bfcb0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" class="ui image"/>  
                 <br></br>
                 <h3 className="ui header">Prices</h3>

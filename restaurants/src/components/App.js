@@ -10,6 +10,10 @@ import ReservationPage from "./ReservationPage";
 import StaffManagementPage from "./StaffManagementPage";
 import Categories from "./Categories";
 import Footer from "./Footer";
+import SeeRestaurants from "./SeeRestaurants";
+import ListMenus from "./ListMenus";
+import Prices from "./Prices"
+
 
 const App = () => {
   return (
@@ -24,6 +28,10 @@ const App = () => {
             <Route path="/reservations" exact component={ReservationPage} />
             <Route path="/staff" exact component={StaffManagementPage} />
             <Route path="/categories" exact component={Categories} />
+            <Route path="/see" exact component={SeeRestaurants} />
+            <Route path="/menus" exact component={ListMenus} />
+            <Route path="/prices" exact component={Prices} />
+
           </Switch>
           <Footer />
         </div>
