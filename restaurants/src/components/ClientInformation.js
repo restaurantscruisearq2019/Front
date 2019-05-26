@@ -1,6 +1,4 @@
 import React from "react";
-import $ from "jquery";
-import accordion from "jquery-ui";
 
 class ClientInformation extends React.Component {
   render() {
