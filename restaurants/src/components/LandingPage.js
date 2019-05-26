@@ -12,8 +12,8 @@ class LandingPage extends React.Component {
           </div>
         </div>
         <div className="row">
-          <div className="ui sixteen wide column two column relaxed grid">
-            <div className="column ui segment bottom aligned">
+          <div className="ui sixteen wide column two column relaxed grid middle aligned content">
+            <div className="column ui segment">
               <ScheduleCard />
             </div>
             <div className="column">

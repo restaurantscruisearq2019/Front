@@ -12,7 +12,7 @@ class SchedulePage extends React.Component {
     const actDate = new Date();
     return(
       <div className="ui container">
-        <div class="ui stackable grid">
+        <div class="ui stackable grid middle aligned content">
           <div className="three wide column">
             <h2 className="ui header center aligned">
               {`${actDate}`}
