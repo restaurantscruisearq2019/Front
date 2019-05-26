@@ -4,7 +4,7 @@ class Categories extends React.Component {
 
   render() {
     return(
-      <div id="reservationgrid" className="ui sixteen wide column two column relaxed grid middle aligned content container">
+      <div id="reservationgrid" className="ui sixteen wide column two column relaxed stackable grid middle aligned content container">
           <div className="five wide column">
             <div class="ui secondary vertical menu">
                 <a class="active item">

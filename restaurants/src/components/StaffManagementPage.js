@@ -1,11 +1,12 @@
 import React from "react";
 import StaffInfoPage from "./StaffInfoPage";
+import ManagerLoginPage from "./ManagerLoginPage";
 
 class StaffManagementPage extends React.Component {
   render() {
     return (
-      <div className="ui container">
-        <StaffInfoPage />
+      <div id="reservationgrid" className="ui container">
+        <ManagerLoginPage />
       </div>
     );
   }
