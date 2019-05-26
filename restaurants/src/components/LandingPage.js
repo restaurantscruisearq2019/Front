@@ -12,7 +12,7 @@ class LandingPage extends React.Component {
           </div>
         </div>
         <div className="row">
-          <div className="ui sixteen wide column two column relaxed grid middle aligned content">
+          <div className="ui sixteen wide column two column relaxed grid middle aligned content container">
             <div className="column ui segment">
               <ScheduleCard />
             </div>

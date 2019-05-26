@@ -8,21 +8,22 @@ class ScheduleCard extends React.Component {
   render() {
     return (
       <div className="ui container">
-        <div className="ui two column grid">
+        <div className="ui sixteen wide column two column relaxed stackable grid middle aligned content container">
           <div className="ui column">
-            <h1 className="ui header">
+            <h2 className="ui header">
               {`${this.state.date}`}
-            </h1>
+            </h2>
           </div>
           <div className="column">
             <div className="content">
-              <h1 className="header">Today's Information</h1>
-              <div className="meta">
+              <h1 className="ui text container">Today's Information</h1>
+              {/* <div className="meta">
                 <span>Description</span>
-              </div>
+              </div> */}
               <div className="description">
                 <p>
-                  Restaurants Are Open 24/7, nonetheless do not forget they are reserved under eating hours.
+                  Restaurants Are Open 24/7, nonetheless do not forget they are reserved
+                   under breakfast, lunch and dinner hours.
                 </p>
               </div>
             </div>
