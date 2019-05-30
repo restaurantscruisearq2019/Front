@@ -11,28 +11,28 @@ class SeeRestaurants extends React.Component {
             <div className="ui huge header">Restaurants</div>
 
               <div class="ui secondary vertical menu">
-                <a class="active item">
+                <a href="undefined" class="active item">
                     BurguersHit
                 </a>
-                <a class="item">
+                <a href="undefined" class="item">
                     BurguersMegaHit
                 </a>
-                <a class="active item">
+                <a href="undefined" class="active item">
                     BurguersHyperHit
                 </a>
-                <a class="item">
+                <a href="undefined" class="item">
                     VegieHit
                 </a>
-                <a class="active item">
+                <a href="undefined" class="active item">
                     VegieMegaHit
                 </a>
-                <a class="item">
+                <a href="undefined" class="item">
                     VegieHyperHit
                 </a>
             </div>
           </div>
           <div className="eight wide column">
-            <img class="ui middle aligned rounded fluid image" src="https://st2.depositphotos.com/1671840/7140/i/950/depositphotos_71403333-stock-photo-cruise-restaurant.jpg">
+            <img alt="" class="ui middle aligned rounded fluid image" src="https://st2.depositphotos.com/1671840/7140/i/950/depositphotos_71403333-stock-photo-cruise-restaurant.jpg">
             </img>
           </div>
       </div>

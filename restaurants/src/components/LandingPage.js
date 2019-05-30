@@ -19,7 +19,7 @@ class LandingPage extends React.Component {
             <div className="column">
               <div className="ui fluid card">
                 <div className="image">
-                  <img
+                  <img alt=""
                     width="100%"
                     src="https://images.unsplash.com/photo-1457904297262-2dcf97b883ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=877&q=80"
                   />

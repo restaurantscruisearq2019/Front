@@ -10,28 +10,28 @@ class ListMenus extends React.Component {
             <div className="ui huge header">Types of menus</div>
 
               <div class="ui secondary vertical menu">
-                <a class="active item">
+                <a href="undefined" class="active item">
                     tasting
                 </a>
-                <a class="item">
+                <a href="undefined" class="item">
                     today's menu
                 </a>
-                <a class="active item">
+                <a href="undefined" class="active item">
                     executive
                 </a>
-                <a class="item">
+                <a href="undefined" class="item">
                     fast foods
                 </a>
-                <a class="active item">
+                <a href="undefined" class="active item">
                     for children
                 </a>
-                <a class="item">
+                <a href="undefined" class="item">
                     menu a la carte
                 </a>
             </div>
           </div>
           <div className="eight wide column">
-            <img class="ui middle aligned rounded fluid image" src="http://www.agendatuxtla.com/img/RESTAURANTES/LA%20MORENA/Cartas%20La%20Morena-01.jpg">
+            <img alt="" class="ui middle aligned rounded fluid image" src="http://www.agendatuxtla.com/img/RESTAURANTES/LA%20MORENA/Cartas%20La%20Morena-01.jpg">
             </img>
           </div>
          </div>

@@ -30,7 +30,7 @@ class StaffInfoPage extends React.Component {
               </div>
             </div>
           </div>
-          <img className="ui avatar image" src="default" />
+          <img alt="" className="ui avatar image" src="default" />
           <div className="content">
             <div className="header">{employee.name}</div>
           </div>

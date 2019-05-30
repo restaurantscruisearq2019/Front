@@ -9,29 +9,29 @@ class Prices extends React.Component{
   <div class="four wide column">
   <div className="ui huge header">Restaurant prices</div>
     <div class="ui vertical fluid tabular menu">
-      <a class="active item">
+      <a href="undefined" class="active item">
         BurguerHit
       </a>
-      <a class="item">
+      <a href="undefined" class="item">
 		BurguerMegaHit
       </a>
-      <a class="item">
+      <a href="undefined" class="item">
 		BurguerHyperHit
       </a>
-      <a class="item">
+      <a href="undefined" class="item">
         VegieHit
       </a>
-      <a class="item">
+      <a href="undefined" class="item">
         VegieMegaHit
       </a>
-      <a class="item">
+      <a href="undefined" class="item">
         VegieHyperHit
       </a>
     </div>
   </div>
   <div class="twelve wide stretched column">
     <div class="ui segment">
-<img class="ui middle aligned rounded fluid image"  src="https://pbs.twimg.com/media/B7fRc45IIAELZqP.jpg">
+<img alt="" class="ui middle aligned rounded fluid image"  src="https://pbs.twimg.com/media/B7fRc45IIAELZqP.jpg">
 </img>
   </div>
   </div>

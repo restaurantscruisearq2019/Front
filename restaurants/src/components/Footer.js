@@ -12,16 +12,16 @@ class Footer extends React.Component {
             <div className="three wide column">
               <h4 className="ui inverted header">About</h4>
               <div className="ui inverted link list">
-                <a href="#" className="item">
+                <a href="undefined" className="item">
                   Sitemap
                 </a>
-                <a href="#" className="item">
+                <a href="undefined" className="item">
                   Contact Us
                 </a>
-                <a href="#" className="item">
+                <a href="undefined" className="item">
                   Religious Ceremonies
                 </a>
-                <a href="#" className="item">
+                <a href="undefined" className="item">
                   Gazebo Plans
                 </a>
               </div>
@@ -29,16 +29,16 @@ class Footer extends React.Component {
             <div className="three wide column">
               <h4 className="ui inverted header">Services</h4>
               <div className="ui inverted link list">
-                <a href="#" className="item">
+                <a href="undefined" className="item">
                   Banana Pre-Order
                 </a>
-                <a href="#" className="item">
+                <a href="undefined" className="item">
                   DNA FAQ
                 </a>
-                <a href="#" className="item">
+                <a href="undefined" className="item">
                   How To Access
                 </a>
-                <a href="#" className="item">
+                <a href="undefined" className="item">
                   Favorite X-Men
                 </a>
               </div>
