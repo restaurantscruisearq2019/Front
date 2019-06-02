@@ -21,12 +21,12 @@ class StaffInfoPage extends React.Component {
       return (
         <div className="item">
           <div className="right floated content">
-            <div class="ui dropdown">
-              <i class="bars icon" />
-              <div class="right menu">
-                <div class="item">{employee.name}</div>
-                <div class="item">{employee.office}</div>
-                <div class="item">Delete</div>
+            <div className="ui dropdown">
+              <i className="bars icon" />
+              <div className="right menu">
+                <div className="item">{employee.name}</div>
+                <div className="item">{employee.office}</div>
+                <div className="item">Delete</div>
               </div>
             </div>
           </div>

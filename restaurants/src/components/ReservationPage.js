@@ -4,35 +4,30 @@ import ClientForm from "./ClientForm";
 import "../styles/index.css";
 
 class ReservationPage extends React.Component {
+  state = {
+    id: null
+  };
 
-  componentDidMount() {
-    fetch('localhost:5000/reservationgroups/:id')
-      .then((response) => {
-        return response.json()
-      })
-      .then((reservations) => {
-        this.setState({ reservations: reservations })
-      })
+  renderInfo() {
+    if (this.state.id) return <ClientInformation />;
+    return;
   }
 
+  setId = id => {
+    this.setState({ id });
+  };
+
   render() {
-    if(this.state.reservations.lenght){
-      return (
-        <div className="container-fluid">
-        <ReservationList listado={this.state}/>
-        </div>
-        )
-    }else{
     return (
       <div
         className="ui middle aligned center aligned grid"
         id="reservationgrid">
         <div className="column" id="reservationcolumn">
-          <ClientForm />
-          <ClientInformation />
+          <ClientForm setState={this.setId} />
+          {this.renderInfo()}
         </div>
       </div>
-    );}
+    );
   }
 }
 

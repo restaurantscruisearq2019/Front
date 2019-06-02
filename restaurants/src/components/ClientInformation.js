@@ -16,7 +16,6 @@ class ClientInformation extends React.Component {
           </div>
           <div className="content">
             <h4>Restaurant Name</h4>
-            <h4>Location</h4>
             <h4>Hour</h4>
           </div>
         </div>
@@ -28,7 +27,6 @@ class ClientInformation extends React.Component {
           </div>
           <div className="content">
             <h4>Restaurant Name</h4>
-            <h4>Location</h4>
             <h4>Hour</h4>
           </div>
         </div>
@@ -40,7 +38,6 @@ class ClientInformation extends React.Component {
           </div>
           <div className="content">
             <h4>Restaurant Name</h4>
-            <h4>Location</h4>
             <h4>Hour</h4>
           </div>
         </div>
