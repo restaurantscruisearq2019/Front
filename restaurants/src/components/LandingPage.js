@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import Carousel from "./Carousel";
 import ScheduleCard from "./ScheduleCard";
 
@@ -13,24 +15,27 @@ class LandingPage extends React.Component {
         </div>
         <div className="row">
           <div className="ui sixteen wide column two column relaxed grid middle aligned content container">
-            <div className="column ui segment">
+            <Link className="column ui segment" to="/schedule">
               <ScheduleCard />
-            </div>
+            </Link>
             <div className="column">
-              <div className="ui fluid card">
-                <div className="image">
-                  <img alt=""
-                    width="100%"
-                    src="https://images.unsplash.com/photo-1457904297262-2dcf97b883ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=877&q=80"
-                  />
-                </div>
-                <div className="content">
-                  <div className="ui medium header">
-                    <i className="calendar alternate icon" />
-                    Check your Reservation
+              <Link to="/reservations">
+                <div className="ui fluid card">
+                  <div className="image">
+                    <img
+                      alt=""
+                      width="100%"
+                      src="https://images.unsplash.com/photo-1457904297262-2dcf97b883ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=877&q=80"
+                    />
+                  </div>
+                  <div className="content">
+                    <div className="ui medium header">
+                      <i className="calendar alternate icon" />
+                      Check your Reservation
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class ListMenus extends React.Component {
   render() {
@@ -10,24 +11,24 @@ class ListMenus extends React.Component {
           <div className="ui huge header">Types of menus</div>
 
           <div className="ui secondary vertical menu">
-            <a href="undefined" className="active item">
+            <Link to="undefined" className="active item">
               tasting
-            </a>
-            <a href="undefined" className="item">
+            </Link>
+            <Link to="undefined" className="item">
               today's menu
-            </a>
-            <a href="undefined" className="active item">
+            </Link>
+            <Link to="undefined" className="active item">
               executive
-            </a>
-            <a href="undefined" className="item">
+            </Link>
+            <Link to="undefined" className="item">
               fast foods
-            </a>
-            <a href="undefined" className="active item">
+            </Link>
+            <Link to="undefined" className="active item">
               for children
-            </a>
-            <a href="undefined" className="item">
-              menu a la carte
-            </a>
+            </Link>
+            <Link to="undefined" className="item">
+              menu Link la carte
+            </Link>
           </div>
         </div>
         <div className="eight wide column">

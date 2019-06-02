@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class SeeRestaurants extends React.Component {
   render() {
@@ -10,24 +11,24 @@ class SeeRestaurants extends React.Component {
           <div className="ui huge header">Restaurants</div>
 
           <div className="ui secondary vertical menu">
-            <a href="undefined" className="active item">
+            <Link to="undefined" className="active item">
               BurguersHit
-            </a>
-            <a href="undefined" className="item">
+            </Link>
+            <Link to="undefined" className="item">
               BurguersMegaHit
-            </a>
-            <a href="undefined" className="active item">
+            </Link>
+            <Link to="undefined" className="active item">
               BurguersHyperHit
-            </a>
-            <a href="undefined" className="item">
+            </Link>
+            <Link to="undefined" className="item">
               VegieHit
-            </a>
-            <a href="undefined" className="active item">
+            </Link>
+            <Link to="undefined" className="active item">
               VegieMegaHit
-            </a>
-            <a href="undefined" className="item">
+            </Link>
+            <Link to="undefined" className="item">
               VegieHyperHit
-            </a>
+            </Link>
           </div>
         </div>
         <div className="eight wide column">

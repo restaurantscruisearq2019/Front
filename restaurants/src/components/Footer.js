@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class Footer extends React.Component {
   render() {
@@ -12,41 +13,41 @@ class Footer extends React.Component {
             <div className="three wide column">
               <h4 className="ui inverted header">About</h4>
               <div className="ui inverted link list">
-                <a href="undefined" className="item">
+                <Link to="undefined" className="item">
                   Sitemap
-                </a>
-                <a href="undefined" className="item">
+                </Link>
+                <Link to="undefined" className="item">
                   Contact Us
-                </a>
-                <a href="undefined" className="item">
+                </Link>
+                <Link to="undefined" className="item">
                   Religious Ceremonies
-                </a>
-                <a href="undefined" className="item">
+                </Link>
+                <Link to="undefined" className="item">
                   Gazebo Plans
-                </a>
+                </Link>
               </div>
             </div>
             <div className="three wide column">
               <h4 className="ui inverted header">Services</h4>
               <div className="ui inverted link list">
-                <a href="undefined" className="item">
+                <Link to="undefined" className="item">
                   Banana Pre-Order
-                </a>
-                <a href="undefined" className="item">
+                </Link>
+                <Link to="undefined" className="item">
                   DNA FAQ
-                </a>
-                <a href="undefined" className="item">
+                </Link>
+                <Link to="undefined" className="item">
                   How To Access
-                </a>
-                <a href="undefined" className="item">
+                </Link>
+                <Link to="undefined" className="item">
                   Favorite X-Men
-                </a>
+                </Link>
               </div>
             </div>
             <div className="seven wide column">
               <h4 className="ui inverted header">Footer Header</h4>
               <p>
-                Extra space for a call to action inside the footer that could
+                Extra space for Link call to action inside the footer that could
                 help re-engage users.
               </p>
             </div>
