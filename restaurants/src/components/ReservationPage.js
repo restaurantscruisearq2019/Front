@@ -42,12 +42,15 @@ class ReservationPage extends React.Component {
       .then(data => {
         console.log(data.data);
         this.setState({ reservationInfo: data.data });
-      });
+      })
+      .catch(err => {
+        console.log(err);
+      })
   };
 
   renderInfo() {
     if (this.state.id) {
-      if (this.state.reservationInfo) {
+      if (!this.state.reservationInfo) {
         return <ClientInformation info={this.state.reservationInfo} />;
       }
       return <h2>No info found</h2>;
