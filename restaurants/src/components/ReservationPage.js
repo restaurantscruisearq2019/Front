@@ -10,6 +10,7 @@ import "../styles/index.css";
 class ReservationPage extends React.Component {
   state = {
     id: null,
+    date: new Date(),
     reservationInfo: {}
   };
 
@@ -19,15 +20,27 @@ class ReservationPage extends React.Component {
         query: gql`
           {
             ClientDailyReservation(
-              clientID: "3"
-              date: "June 02, 2019 10:15:30"
+              clientID: ${this.state.id}
+              date: "${this.state.date.toString()}"
             ) {
-              name
+              breakfast{
+                name
+                hour
+              }
+              lunch{
+                name
+                hour
+              }
+              dinner{
+                name
+                hour
+              }
             }
           }
         `
       })
       .then(data => {
+        console.log(data.data);
         this.setState({ reservationInfo: data.data });
       });
   };
