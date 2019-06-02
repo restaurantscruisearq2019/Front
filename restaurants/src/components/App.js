@@ -12,29 +12,25 @@ import Categories from "./Categories";
 import Footer from "./Footer";
 import SeeRestaurants from "./SeeRestaurants";
 import ListMenus from "./ListMenus";
-import Prices from "./Prices"
-
+import Prices from "./Prices";
 
 const App = () => {
   return (
     <div className="body">
       <Router history={history}>
-        <div className="body">
-          <Menu />
-          <Switch>
-            <Route path="/" exact component={LandingPage} />
-            <Route path="/restaurants" exact component={RestaurantsPage} />
-            <Route path="/schedule" exact component={SchedulePage} />
-            <Route path="/reservations" exact component={ReservationPage} />
-            <Route path="/staff" exact component={StaffManagementPage} />
-            <Route path="/categories" exact component={Categories} />
-            <Route path="/see" exact component={SeeRestaurants} />
-            <Route path="/menus" exact component={ListMenus} />
-            <Route path="/prices" exact component={Prices} />
-
-          </Switch>
-          <Footer />
-        </div>
+        <Menu />
+        <Switch>
+          <Route path="/" exact component={LandingPage} />
+          <Route path="/restaurants" exact component={RestaurantsPage} />
+          <Route path="/schedule" exact component={SchedulePage} />
+          <Route path="/reservations" exact component={ReservationPage} />
+          <Route path="/staff" exact component={StaffManagementPage} />
+          <Route path="/categories" exact component={Categories} />
+          <Route path="/see" exact component={SeeRestaurants} />
+          <Route path="/menus" exact component={ListMenus} />
+          <Route path="/prices" exact component={Prices} />
+        </Switch>
+        <Footer />
       </Router>
     </div>
   );
