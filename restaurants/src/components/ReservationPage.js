@@ -5,7 +5,7 @@ import "../styles/index.css";
 
 class ReservationPage extends React.Component {
 
-  /*componentDidMount() {
+  componentDidMount() {
     fetch('localhost:5000/reservationgroups/:id')
       .then((response) => {
         return response.json()
@@ -13,15 +13,15 @@ class ReservationPage extends React.Component {
       .then((reservations) => {
         this.setState({ reservations: reservations })
       })
-  }*/
+  }
 
   render() {
     if(this.state.reservations.lenght){
       return (
         <div className="container-fluid">
-        /*ReservationList listado={this.state}*/
+        <ReservationList listado={this.state}/>
         </div>
-        );
+        )
     }else{
     return (
       <div
