@@ -16,7 +16,7 @@ class ManagerLoginPage extends React.Component {
                   <input
                     type="text"
                     name="email"
-                    placeholder="E-mail address"
+                    placeholder="Username"
                   />
                 </div>
               </div>
