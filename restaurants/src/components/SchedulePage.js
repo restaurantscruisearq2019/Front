@@ -26,7 +26,9 @@ class SchedulePage extends React.Component {
       });
   }
 
-  onChange = date => this.setState({ date });
+  onChange = date => {
+    this.setState({ date })
+  };
 
   todayInfo = () =>{
     if(this.state.todayInfo !== null){

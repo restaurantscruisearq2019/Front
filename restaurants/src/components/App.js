@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch, Link } from "react-router-dom";
 
 import history from "../history";
 import MenuS from "./Menu";
@@ -46,22 +46,36 @@ class App extends React.Component {
               vertical
               inline
               inverted>
-              <Menu.Item>
-                <Icon name="home" />
-                Home
-              </Menu.Item>
-              <Menu.Item>
-                <Icon name="block layout" />
-                Topics
-              </Menu.Item>
-              <Menu.Item>
-                <Icon name="smile" />
-                Friends
-              </Menu.Item>
-              <Menu.Item>
-                <Icon name="calendar" />
-                History
-              </Menu.Item>
+              <Link to="/">
+                <Menu.Item>
+                  <Icon name="home" />
+                  Home
+                </Menu.Item>
+              </Link>
+              <Link to="/restaurants">
+                <Menu.Item>
+                  <Icon name="utensils" />
+                  Restaurants
+                </Menu.Item>
+              </Link>
+              <Link to="/schedule">
+                <Menu.Item>
+                  <Icon name="calendar alternate" />
+                  Schedule
+                </Menu.Item>
+              </Link>
+              <Link to="/reservations">
+                <Menu.Item>
+                  <Icon name="user" />
+                  Reservation
+                </Menu.Item>
+              </Link>
+              <Link to="/categories">
+                <Menu.Item>
+                  <Icon name="th list" />
+                  Categories
+                </Menu.Item>
+              </Link>
             </Sidebar>
             <Sidebar.Pusher
               style={{ display: "flex", justifyContent: "center" }}>
