@@ -2,7 +2,7 @@ import React from "react";
 import { Router, Route, Switch } from "react-router-dom";
 
 import history from "../history";
-import Menu from "./Menu";
+import MenuS from "./Menu";
 import LandingPage from "./LandingPage";
 import RestaurantsPage from "./RestaurantsPage";
 import SchedulePage from "./SchedulePage";
@@ -15,30 +15,90 @@ import ListMenus from "./ListMenus";
 import Prices from "./Prices";
 import StaffInfoPage from "./StaffInfoPage";
 
-const App = () => {
-  return (
-    <div
-      style={{ display: "flex", minHeight: "100vh", flexDirection: "column" }}>
-      <Router history={history}>
-        <Menu />
-        <div style={{ flex: 1, display: "flex", justifyContent: "center" }}>
-          <Switch>
-            <Route path="/" exact component={LandingPage} />
-            <Route path="/restaurants" exact component={RestaurantsPage} />
-            <Route path="/schedule" exact component={SchedulePage} />
-            <Route path="/reservations" exact component={ReservationPage} />
-            <Route path="/staff" exact component={StaffManagementPage} />
-            <Route path="/categories" exact component={Categories} />
-            <Route path="/staffinfo" exact component={StaffInfoPage} />
-            <Route path="/see" exact component={SeeRestaurants} />
-            <Route path="/menus" exact component={ListMenus} />
-            <Route path="/prices" exact component={Prices} />
-          </Switch>
-        </div>
-        <Footer />
-      </Router>
-    </div>
-  );
-};
+import {
+  Button,
+  Container,
+  Divider,
+  Dropdown,
+  Header,
+  Message,
+  Segment,
+  Menu,
+  Icon,
+  Sidebar
+} from "semantic-ui-react";
+
+import SideBar from "./SideBar";
+
+class App extends React.Component {
+  state = { vis: false };
+
+  setVis = () => {
+    console.log(this.state);
+    this.setState({ vis: !this.state.vis });
+  };
+
+  render() {
+    return (
+      <div
+        style={{
+          display: "flex",
+          minHeight: "100vh",
+          flexDirection: "column"
+        }}>
+        <Router history={history}>
+          <MenuS setVis={() => this.setVis()} />
+          <Sidebar.Pushable
+            style={{ flex: 1, display: "flex", justifyContent: "center" }}
+            as={Segment}
+            attached="bottom">
+            <Sidebar
+              as={Menu}
+              animation="overlay"
+              visible={this.state.vis}
+              icon="labeled"
+              vertical
+              inline
+              inverted>
+              <Menu.Item>
+                <Icon name="home" />
+                Home
+              </Menu.Item>
+              <Menu.Item>
+                <Icon name="block layout" />
+                Topics
+              </Menu.Item>
+              <Menu.Item>
+                <Icon name="smile" />
+                Friends
+              </Menu.Item>
+              <Menu.Item>
+                <Icon name="calendar" />
+                History
+              </Menu.Item>
+            </Sidebar>
+            <Sidebar.Pusher
+              style={{ display: "flex", justifyContent: "center" }}>
+              <Switch>
+                <Route path="/" exact component={LandingPage} />
+                <Route path="/restaurants" exact component={RestaurantsPage} />
+                <Route path="/schedule" exact component={SchedulePage} />
+                <Route path="/reservations" exact component={ReservationPage} />
+                <Route path="/staff" exact component={StaffManagementPage} />
+                <Route path="/categories" exact component={Categories} />
+                <Route path="/staffinfo" exact component={StaffInfoPage} />
+
+                <Route path="/see" exact component={SeeRestaurants} />
+                <Route path="/menus" exact component={ListMenus} />
+                <Route path="/prices" exact component={Prices} />
+              </Switch>
+            </Sidebar.Pusher>
+          </Sidebar.Pushable>
+          <Footer />
+        </Router>
+      </div>
+    );
+  }
+}
 
 export default App;
