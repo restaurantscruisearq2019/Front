@@ -26,7 +26,7 @@ class RestaurantsPage extends React.Component {
         <div className="ui equal width stackable internally celled grid">
           <div className="center aligned row">
             <div className="column">
-              <Link to="/see">
+              <Link to="/categories">
                 <div>
                   <img
                     alt=""

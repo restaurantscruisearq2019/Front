@@ -13,42 +13,35 @@ class Footer extends React.Component {
             <div className="three wide column">
               <h4 className="ui inverted header">About</h4>
               <div className="ui inverted link list">
-                <Link to="undefined" className="item">
-                  Sitemap
+                <Link to="/restaurants" className="item">
+                  Restaurants
                 </Link>
-                <Link to="undefined" className="item">
-                  Contact Us
+                <Link to="/reservations" className="item">
+                  Check Reservation
                 </Link>
-                <Link to="undefined" className="item">
-                  Religious Ceremonies
-                </Link>
-                <Link to="undefined" className="item">
-                  Gazebo Plans
+                <Link to="/Schedule" className="item">
+                  Schedule
                 </Link>
               </div>
             </div>
             <div className="three wide column">
               <h4 className="ui inverted header">Services</h4>
               <div className="ui inverted link list">
-                <Link to="undefined" className="item">
-                  Banana Pre-Order
+                <Link to="/categories" className="item">
+                  Categories
                 </Link>
-                <Link to="undefined" className="item">
-                  DNA FAQ
+                <Link to="/menus" className="item">
+                  Menus
                 </Link>
-                <Link to="undefined" className="item">
-                  How To Access
-                </Link>
-                <Link to="undefined" className="item">
-                  Favorite X-Men
+                <Link to="/prices" className="item">
+                  Check by Price Range
                 </Link>
               </div>
             </div>
             <div className="seven wide column">
-              <h4 className="ui inverted header">Footer Header</h4>
+              <h4 className="ui inverted header">Restaurants</h4>
               <p>
-                Extra space for Link call to action inside the footer that could
-                help re-engage users.
+                All rights reserved.
               </p>
             </div>
           </div>
