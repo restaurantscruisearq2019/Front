@@ -23,7 +23,6 @@ class MenuS extends React.Component {
   };
 
   renderItems = () => {
-    console.log(this.state);
     if (this.state.width > 767) {
       if (this.state.sidebarVisibility === true) this.setVisibility();
       return (

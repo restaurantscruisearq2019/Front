@@ -15,26 +15,12 @@ import ListMenus from "./ListMenus";
 import Prices from "./Prices";
 import StaffInfoPage from "./StaffInfoPage";
 
-import {
-  Button,
-  Container,
-  Divider,
-  Dropdown,
-  Header,
-  Message,
-  Segment,
-  Menu,
-  Icon,
-  Sidebar
-} from "semantic-ui-react";
-
-import SideBar from "./SideBar";
+import { Segment, Menu, Icon, Sidebar } from "semantic-ui-react";
 
 class App extends React.Component {
   state = { vis: false };
 
   setVis = () => {
-    console.log(this.state);
     this.setState({ vis: !this.state.vis });
   };
 
