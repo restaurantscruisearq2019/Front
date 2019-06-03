@@ -3,9 +3,9 @@ import React from "react";
 class ManagerLoginPage extends React.Component {
   render() {
     return (
-      <div className="ui middle aligned center aligned grid container">
+      <div className="ui stackable middle aligned centered grid container">
         <div className="six wide column">
-          <h2 className="ui image header">
+          <h2 className="ui centered header">
             <div className="content">Log-in to your account</div>
           </h2>
           <form className="ui large form">

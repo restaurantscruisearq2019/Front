@@ -21,7 +21,7 @@ const App = () => {
       style={{ display: "flex", minHeight: "100vh", flexDirection: "column" }}>
       <Router history={history}>
         <Menu />
-        <div style={{ flex: 1, display: "flex" }}>
+        <div style={{ flex: 1, display: "flex", justifyContent: "center" }}>
           <Switch>
             <Route path="/" exact component={LandingPage} />
             <Route path="/restaurants" exact component={RestaurantsPage} />

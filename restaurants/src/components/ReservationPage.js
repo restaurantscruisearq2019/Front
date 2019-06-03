@@ -65,8 +65,8 @@ class ReservationPage extends React.Component {
 
   render() {
     return (
-      <div className="ui middle aligned center aligned grid" style={{}}>
-        <div className="column">
+      <div className="ui stackable middle aligned centered grid container">
+        <div className="six wide column">
           <ClientForm setState={this.setId} />
           {this.renderInfo()}
         </div>
