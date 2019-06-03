@@ -23,11 +23,9 @@ class ClientForm extends React.Component {
 
   render() {
     return (
-      <div
-        id="reservationgrid"
-        className="ui middle aligned center aligned grid container">
-        <div id="reservationcolumn" className="column">
-          <h2 className="ui  image header">
+      <div className="ui middle aligned center aligned grid container">
+        <div className="six wide column">
+          <h2 className="ui image header">
             <div className="content">Check your reservation!</div>
           </h2>
           <form className="ui large form">

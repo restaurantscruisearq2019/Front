@@ -3,10 +3,8 @@ import React from "react";
 class ManagerLoginPage extends React.Component {
   render() {
     return (
-      <div
-        id="reservationgrid"
-        className="ui middle aligned center aligned grid container">
-        <div id="reservationcolumn" className="column">
+      <div className="ui middle aligned center aligned grid container">
+        <div className="six wide column">
           <h2 className="ui image header">
             <div className="content">Log-in to your account</div>
           </h2>

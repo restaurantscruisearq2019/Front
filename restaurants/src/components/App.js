@@ -13,23 +13,32 @@ import Footer from "./Footer";
 import SeeRestaurants from "./SeeRestaurants";
 import ListMenus from "./ListMenus";
 import Prices from "./Prices";
+import RestaurantsByCategory from "./RestaurantsByCategory";
 
 const App = () => {
   return (
-    <div className="body">
+    <div
+      style={{ display: "flex", minHeight: "100vh", flexDirection: "column" }}>
       <Router history={history}>
         <Menu />
-        <Switch>
-          <Route path="/" exact component={LandingPage} />
-          <Route path="/restaurants" exact component={RestaurantsPage} />
-          <Route path="/schedule" exact component={SchedulePage} />
-          <Route path="/reservations" exact component={ReservationPage} />
-          <Route path="/staff" exact component={StaffManagementPage} />
-          <Route path="/categories" exact component={Categories} />
-          <Route path="/see" exact component={SeeRestaurants} />
-          <Route path="/menus" exact component={ListMenus} />
-          <Route path="/prices" exact component={Prices} />
-        </Switch>
+        <div style={{ flex: 1, display: "flex" }}>
+          <Switch>
+            <Route path="/" exact component={LandingPage} />
+            <Route path="/restaurants" exact component={RestaurantsPage} />
+            <Route path="/schedule" exact component={SchedulePage} />
+            <Route path="/reservations" exact component={ReservationPage} />
+            <Route path="/staff" exact component={StaffManagementPage} />
+            <Route path="/categories" exact component={Categories} />
+            <Route
+              path="/restaurants/:category"
+              exact
+              component={RestaurantsByCategory}
+            />
+            <Route path="/see" exact component={SeeRestaurants} />
+            <Route path="/menus" exact component={ListMenus} />
+            <Route path="/prices" exact component={Prices} />
+          </Switch>
+        </div>
         <Footer />
       </Router>
     </div>
