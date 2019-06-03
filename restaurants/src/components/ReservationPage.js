@@ -10,7 +10,7 @@ class ReservationPage extends React.Component {
   state = {
     id: null,
     date: new Date(),
-    reservationInfo: {}
+    reservationInfo: null
   };
 
   fetchReservations = () => {
@@ -50,9 +50,9 @@ class ReservationPage extends React.Component {
   renderInfo() {
     if (this.state.id) {
       if (!this.state.reservationInfo) {
-        return <ClientInformation info={this.state.reservationInfo} />;
+        return <h2>No info found</h2>;
       }
-      return <h2>No info found</h2>;
+      return <ClientInformation info={this.state.reservationInfo} />;
     }
     return;
   }
