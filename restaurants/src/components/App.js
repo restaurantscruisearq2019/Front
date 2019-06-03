@@ -13,7 +13,6 @@ import Footer from "./Footer";
 import SeeRestaurants from "./SeeRestaurants";
 import ListMenus from "./ListMenus";
 import Prices from "./Prices";
-import RestaurantsByCategory from "./RestaurantsByCategory";
 import StaffInfoPage from "./StaffInfoPage";
 
 const App = () => {
@@ -31,11 +30,6 @@ const App = () => {
             <Route path="/staff" exact component={StaffManagementPage} />
             <Route path="/categories" exact component={Categories} />
             <Route path="/staffinfo" exact component={StaffInfoPage} />
-            <Route
-              path="/restaurants/:category"
-              exact
-              component={RestaurantsByCategory}
-            />
             <Route path="/see" exact component={SeeRestaurants} />
             <Route path="/menus" exact component={ListMenus} />
             <Route path="/prices" exact component={Prices} />
