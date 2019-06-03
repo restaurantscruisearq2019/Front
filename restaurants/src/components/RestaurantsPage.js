@@ -1,24 +1,7 @@
 import React from "react";
-import gql from "graphql-tag";
-import apollo from "../api/apollo";
 import { Link } from "react-router-dom";
 
 class RestaurantsPage extends React.Component {
-  componentDidMount() {
-    apollo
-      .query({
-        query: gql`
-          {
-            restaurants(id: "5cde27f0811c9e31d4566d04") {
-              name
-            }
-          }
-        `
-      })
-      .then(data => {
-        console.log(data);
-      });
-  }
 
   render() {
     return (

@@ -48,7 +48,7 @@ class Prices extends React.Component {
         id="reservationgrid"
         className="ui sixteen wide column two column relaxed stackable grid middle aligned content container">
           <div className="four wide column">
-            <div className="ui huge header">Restaurant prices</div>
+            <div className="ui header">Restaurants prices</div>
             <div className="ui secondary vertical pointing menu">
               <button onClick={() => this.fetchRestaurants("10-20")} className="item">
                 10-20 (Dollars)
@@ -58,6 +58,12 @@ class Prices extends React.Component {
               </button>
               <button onClick={() => this.fetchRestaurants("30-40")} className="item">
                 30-40 (Dollars)
+              </button>
+              <button onClick={() => this.fetchRestaurants("40-50")} className="item">
+                40-50 (Dollars)
+              </button>
+              <button onClick={() => this.fetchRestaurants("50-60")} className="item">
+                50-60 (Dollars)
               </button>
             </div>
           </div>
