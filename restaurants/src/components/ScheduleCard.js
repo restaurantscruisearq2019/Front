@@ -1,9 +1,43 @@
 import React from "react";
+import gql from "graphql-tag";
+import apollo from "../api/apollo";
 
 class ScheduleCard extends React.Component {
   state = {
-    date: new Date()
+    date: new Date(),
+    todayInfo: null
   };
+
+  componentWillMount = () => {
+    apollo
+      .query({
+        query: gql`
+        {
+          getDayInfo
+        }       
+        `
+      })
+      .then(data => {
+        this.setState({ todayInfo: data.data.getDayInfo });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
+
+  todayInfo = () =>{
+    if(this.state.todayInfo !== null){
+      if(this.state.todayInfo){
+        return(
+          <p>Restaurants Are Open 24/7, nonetheless do not forget they are reserved under breakfast, lunch and dinner hours.</p>
+        )
+      }
+      return(
+        <p>Restaurants are Closed!</p>
+      )
+    }
+    return <h4>Wait a moment please...</h4>
+  }
 
   render() {
     return (
@@ -21,10 +55,7 @@ class ScheduleCard extends React.Component {
                 <span>Description</span>
               </div> */}
               <div className="description">
-                <p>
-                  Restaurants Are Open 24/7, nonetheless do not forget they are reserved
-                   under breakfast, lunch and dinner hours.
-                </p>
+                {this.todayInfo()}
               </div>
             </div>
           </div>
