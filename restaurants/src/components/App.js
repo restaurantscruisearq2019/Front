@@ -14,6 +14,7 @@ import SeeRestaurants from "./SeeRestaurants";
 import ListMenus from "./ListMenus";
 import Prices from "./Prices";
 import RestaurantsByCategory from "./RestaurantsByCategory";
+import StaffInfoPage from "./StaffInfoPage";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
             <Route path="/reservations" exact component={ReservationPage} />
             <Route path="/staff" exact component={StaffManagementPage} />
             <Route path="/categories" exact component={Categories} />
+            <Route path="/staffinfo" exact component={StaffInfoPage} />
             <Route
               path="/restaurants/:category"
               exact
