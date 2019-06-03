@@ -29,32 +29,28 @@ class Categories extends React.Component {
             </Link>
           </div>
         </div>
-        <div className="eight wide column">
-          <div className="ui raised segment">
-            <Link to="undefined" className="ui red ribbon label">
-              Burguers Hit, Station 208
-            </Link>
-            <img
-              width="100%"
-              alt=""
-              src="http://www.wem.ca/media/356870/fatburger.jpg?center=0.68,0.50166666666666671&mode=crop&width=1920&height=395"
-            />
-            <Link to="undefined" className="ui red ribbon label">
-              Burguers MegaHit, Station 106
-            </Link>
-            <img
-              width="100%"
-              alt=""
-              src="http://www.wem.ca/media/355289/harveys-banner.png?anchor=center&mode=crop&width=1920&height=395"
-            />
-            <Link to="undefined" className="ui red ribbon label">
-              Burguers HyperHit, Station 312
-            </Link>
-            <img
-              width="100%"
-              alt=""
-              src="http://www.wem.ca/media/356731/cafelevi_20180222-16.jpg?crop=0,0.34149481142014326,0,0.35030156974294141&cropmode=percentage&width=1920&height=395"
-            />
+        <div className="eight wide column internally celled grid">
+          <div>
+            <div className="ui centered red card">
+              <div className="content">
+                <div className="center aligned header">McDonalds</div>
+              </div>
+              <div className="extra content">
+                <div className="center aligned author">
+                  <i className="ui avatar image utensils icon" /> Burguers
+                </div>
+              </div>
+            </div>
+            <div className="ui centered red card">
+              <div className="content">
+                <div className="center aligned header">El Corral</div>
+              </div>
+              <div className="extra content">
+                <div className="center aligned author">
+                  <i className="ui avatar image utensils icon" /> Burguers
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
