@@ -1,5 +1,6 @@
 import React from "react";
 import { Router, Route, Switch, Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 import history from "../history";
 import MenuS from "./Menu";
@@ -14,6 +15,7 @@ import SeeRestaurants from "./SeeRestaurants";
 import ListMenus from "./ListMenus";
 import Prices from "./Prices";
 import StaffInfoPage from "./StaffInfoPage";
+import LDAPLogin from "./LDAPLogin";
 
 import { Segment, Menu, Icon, Sidebar } from "semantic-ui-react";
 
@@ -32,6 +34,7 @@ class App extends React.Component {
           minHeight: "100vh",
           flexDirection: "column"
         }}>
+        <LDAPLogin />
         <Router history={history}>
           <MenuS setVis={() => this.setVis()} />
           <Sidebar.Pushable
