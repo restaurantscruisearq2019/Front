@@ -14,11 +14,12 @@ class StaffManagementPage extends React.Component {
   };
 
   fetchManager = () => {
+    console.log(this.props.userName);
     apollo
       .query({
         query: gql`
         {
-          verifyManager(userName: "${this.props.userName}"){
+          verifyManager(username: "${this.props.userName}"){
             _id
             name
             employees{
@@ -89,7 +90,7 @@ class StaffManagementPage extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    userName: state.auth.userName
+    userName: state.auth.user
   };
 };
 
