@@ -18,9 +18,17 @@ import StaffInfoPage from "./StaffInfoPage";
 import LDAPLogin from "./LDAPLogin";
 
 import { Segment, Menu, Icon, Sidebar } from "semantic-ui-react";
+import { resetCurrentUser } from "../actions/authActions";
 
 class App extends React.Component {
   state = { vis: false };
+
+  componentDidMount() {
+    if (localStorage.jwtToken) {
+      console.log("hey");
+      this.props.resetCurrentUser();
+    }
+  }
 
   setVis = () => {
     this.setState({ vis: !this.state.vis });
@@ -123,5 +131,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  {}
+  { resetCurrentUser }
 )(App);

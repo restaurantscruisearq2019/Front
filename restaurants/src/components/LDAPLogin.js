@@ -2,7 +2,7 @@ import React from "react";
 
 import { connect } from "react-redux";
 
-import { setCurrentUser } from "../actions/authActions";
+import { login } from "../actions/authActions";
 import { Button, Form, Modal } from "semantic-ui-react";
 
 class LDAPLogin extends React.Component {
@@ -29,7 +29,7 @@ class LDAPLogin extends React.Component {
   };
 
   handleSubmit = () => {
-    this.props.setCurrentUser(this.state.userName, this.state.password);
+    this.props.login(this.state.userName, this.state.password);
   };
 
   render() {
@@ -82,5 +82,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { setCurrentUser }
+  { login }
 )(LDAPLogin);
