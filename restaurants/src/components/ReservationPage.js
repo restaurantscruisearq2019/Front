@@ -1,5 +1,6 @@
 import React from "react";
 import gql from "graphql-tag";
+import { connect } from "react-redux";
 
 import apollo from "../api/apollo";
 
@@ -14,12 +15,13 @@ class ReservationPage extends React.Component {
   };
 
   fetchReservations = () => {
+    console.log(this.props.id);
     apollo
       .query({
         query: gql`
           {
             ClientDailyReservation(
-              clientID: ${this.state.id}
+              clientID: ${this.props.id}
               date: "${this.state.date.toString()}"
             ) {
               breakfast{
@@ -48,9 +50,10 @@ class ReservationPage extends React.Component {
   };
 
   renderInfo() {
-    if (this.state.id) {
+    console.log(this.state.id);
+    if (this.props.id) {
       if (!this.state.reservationInfo) {
-        return <h2>No info found</h2>;
+        return <h2>Not Authorized</h2>;
       }
       return <ClientInformation info={this.state.reservationInfo} />;
     }
@@ -63,11 +66,18 @@ class ReservationPage extends React.Component {
     });
   };
 
+  componentDidMount() {
+    console.log(this.props.id);
+    if (this.props.id) {
+      this.fetchReservations();
+    }
+  }
+
   render() {
     return (
       <div className="ui stackable middle aligned centered grid container">
         <div className="six wide column">
-          <ClientForm setState={this.setId} />
+          {/* <ClientForm setState={this.setId} /> */}
           {this.renderInfo()}
         </div>
       </div>
@@ -75,4 +85,13 @@ class ReservationPage extends React.Component {
   }
 }
 
-export default ReservationPage;
+const mapStateToProps = state => {
+  return {
+    id: state.auth.user
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  {}
+)(ReservationPage);
