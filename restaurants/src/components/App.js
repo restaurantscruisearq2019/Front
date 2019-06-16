@@ -25,7 +25,6 @@ class App extends React.Component {
 
   componentDidMount() {
     if (localStorage.jwtToken) {
-      console.log("hey");
       this.props.resetCurrentUser();
     }
   }

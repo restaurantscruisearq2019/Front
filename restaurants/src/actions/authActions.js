@@ -30,8 +30,6 @@ export const setCurrentUser = ({ validate, userName, token }) => dispatch => {
 };
 
 export const resetCurrentUser = () => dispatch => {
-  console.log("asda");
-
   const token = localStorage.jwtToken;
   const decoded = jwt_decode(token);
   const userName = decoded.userId;
