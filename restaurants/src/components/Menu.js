@@ -26,7 +26,6 @@ class MenuS extends React.Component {
   };
 
   handleLogout = () => {
-    console.log("asdad");
     this.props.logout();
   };
 
