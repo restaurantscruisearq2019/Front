@@ -53,7 +53,15 @@ class ReservationPage extends React.Component {
     console.log(this.state.id);
     if (this.props.id) {
       if (!this.state.reservationInfo) {
-        return <h2>Not Authorized</h2>;
+        return (
+          <div
+            className="ui left aligned centered fluid card"
+            style={{ textAlign: "center" }}>
+            <div className="content">
+              <h1>No Info Found</h1>
+            </div>
+          </div>
+        );
       }
       return <ClientInformation info={this.state.reservationInfo} />;
     }

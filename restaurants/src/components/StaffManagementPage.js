@@ -67,7 +67,13 @@ class StaffManagementPage extends React.Component {
     return (
       <div className="ui stackable middle aligned centered grid container">
         <div className="six wide column">
-          <h2>Not Authorized</h2>
+          <div
+            className="ui left aligned centered fluid card"
+            style={{ textAlign: "center" }}>
+            <div className="content">
+              <h1>No Info Found</h1>
+            </div>
+          </div>
         </div>
       </div>
     );
