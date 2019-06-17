@@ -1,5 +1,8 @@
 import React from "react";
+import { connect } from "react-redux";
+
 import MenuItem from "./MenuItem";
+import { logout } from "../actions/authActions";
 
 class MenuS extends React.Component {
   state = { width: 0, height: 0, sidebarVisibility: false };
@@ -20,6 +23,10 @@ class MenuS extends React.Component {
   setVisibility = () => {
     this.props.setVis();
     this.setState({ sidebarVisibility: !this.state.sidebarVisibility });
+  };
+
+  handleLogout = () => {
+    this.props.logout();
   };
 
   renderItems = () => {
@@ -49,6 +56,9 @@ class MenuS extends React.Component {
           {this.renderItems()}
           <div className="right menu">
             <MenuItem to="/staff" name="Staff" />
+            <a onClick={() => this.handleLogout()} className="icon item">
+              <i className="logout icon" />
+            </a>
           </div>
         </div>
       </div>
@@ -56,4 +66,7 @@ class MenuS extends React.Component {
   }
 }
 
-export default MenuS;
+export default connect(
+  null,
+  { logout }
+)(MenuS);

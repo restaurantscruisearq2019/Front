@@ -2,7 +2,7 @@ import jwt_decode from "jwt-decode";
 import { apolloAuth } from "../api/apollo";
 import gql from "graphql-tag";
 
-import { SET_CURRENT_USER } from "./types";
+import { SET_CURRENT_USER, UNSET_CURRENT_USER } from "./types";
 
 export const login = (userName, password) => async dispatch => {
   const response = await apolloAuth.query({
@@ -16,8 +16,14 @@ export const login = (userName, password) => async dispatch => {
       }
       `
   });
-  console.log(response);
   dispatch(setCurrentUser(response.data.LDAPVerify));
+};
+
+export const logout = () => dispatch => {
+  localStorage.removeItem("jwtToken");
+  dispatch({
+    type: UNSET_CURRENT_USER
+  });
 };
 
 export const setCurrentUser = ({ validate, userName, token }) => dispatch => {
