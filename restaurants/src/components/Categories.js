@@ -18,6 +18,8 @@ class Categories extends React.Component {
             getRestaurantsByCategories(category: "${a}") {
               name
               _id
+              description
+              images
             }
           }
         `
@@ -37,7 +39,7 @@ class Categories extends React.Component {
     }
     return this.state.categoryRestaurants.map( r => {
       return (
-        <CategoryCard key={r._id} name={r.name} category={this.state.category}/>
+        <CategoryCard key={r._id} description={r.description} images= {r.images} name={r.name} category={this.state.category}/>
       )
     });
   }
