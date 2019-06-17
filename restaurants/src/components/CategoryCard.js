@@ -19,7 +19,11 @@ const CategoryCard = ({ name, category, description, images }) => {
       <div className="extra content">
         <Carousel autoPlay showThumbs={false} infiniteLoop={true}>
           <div>
-            <img alt="" src={images} />
+            <img
+              style={{ width: "100%", height: "400px" }}
+              alt=""
+              src={images}
+            />
             {/* <p className="legend">Legend 1</p> */}
           </div>
         </Carousel>
