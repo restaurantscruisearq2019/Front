@@ -4,7 +4,7 @@ import { HttpLink, createHttpLink } from "apollo-link-http";
 
 export default new ApolloClient({
   //uri: "http://localhost:5000/graphql",
-  uri: "http://ec2-3-84-165-200.compute-1.amazonaws.com:5000/graphql",
+  uri: "http://ec2-174-129-88-34.compute-1.amazonaws.com:5000/graphql",
   request: async operation => {
     const token = await localStorage.getItem("jwtToken");
     operation.setContext({
@@ -21,6 +21,6 @@ export default new ApolloClient({
 }); */
 
 export const apolloAuth = new ApolloClient({
-  uri: "http://ec2-3-84-165-200.compute-1.amazonaws.com:5000/auth"
+  uri: "ec2-174-129-88-34.compute-1.amazonaws.com:5000/auth"
   //uri: "http://localhost:5000/auth"
 });
