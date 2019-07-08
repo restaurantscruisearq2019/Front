@@ -1,12 +1,13 @@
 import React from "react";
+import isEmpty from "lodash/isEmpty";
 
 import { connect } from "react-redux";
 
 import { login } from "../actions/authActions";
-import { Button, Form, Modal } from "semantic-ui-react";
+import { Button, Form, Modal, Header } from "semantic-ui-react";
 
 class LDAPLogin extends React.Component {
-  state = { authenticated: false, userName: "", password: "" };
+  state = { authenticated: false, userName: "", password: "", error: false };
 
   componentDidMount() {
     if (this.props.auth) {
@@ -17,9 +18,15 @@ class LDAPLogin extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
+    console.log("update ",this.props)
     if (prevProps.auth !== this.props.auth) {
+      this.setState({   
+        error: this.props.error
+      });
+    }
+    if (prevProps.error !== this.props.error) {
       this.setState({
-        authenticated: this.props.auth
+        error: !isEmpty(this.props.error)
       });
     }
   }
@@ -34,6 +41,7 @@ class LDAPLogin extends React.Component {
 
   render() {
     const { userName, password } = this.state;
+    console.log(this.state);
 
     return (
       <Modal
@@ -68,6 +76,9 @@ class LDAPLogin extends React.Component {
               Submit
             </Button>
           </Form>
+          { this.state.error &&
+          <Header as='h2' color='red' textAlign='center'>Invalid Credentials</Header>
+          }
         </Modal.Content>
       </Modal>
     );
@@ -75,8 +86,10 @@ class LDAPLogin extends React.Component {
 }
 
 const mapStateToProps = state => {
+  console.log(state.errors)
   return {
-    auth: state.auth.isAuthenticated
+    auth: state.auth.isAuthenticated,
+    error: state.errors
   };
 };
 

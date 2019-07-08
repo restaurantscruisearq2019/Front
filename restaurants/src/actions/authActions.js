@@ -4,6 +4,8 @@ import gql from "graphql-tag";
 
 import { SET_CURRENT_USER, UNSET_CURRENT_USER } from "./types";
 
+import {setError} from './errorActions'
+
 export const login = (userName, password) => async dispatch => {
   const response = await apolloAuth.query({
     query: gql`
@@ -15,8 +17,13 @@ export const login = (userName, password) => async dispatch => {
         }
       }
       `
-  });
-  dispatch(setCurrentUser(response.data.LDAPVerify));
+  })
+  .then(res => {
+    dispatch(setCurrentUser(res.data.LDAPVerify));
+  })
+  .catch(err => {
+    dispatch(setError());
+  })
 };
 
 export const logout = () => dispatch => {

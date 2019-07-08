@@ -1,2 +1,3 @@
 export const SET_CURRENT_USER = "SET_CURRANT_USER";
 export const UNSET_CURRENT_USER = "UNSET_CURRANT_USER";
+export const SET_ERROR = "SET_ERROR";
