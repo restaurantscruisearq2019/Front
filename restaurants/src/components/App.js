@@ -34,6 +34,7 @@ class App extends React.Component {
   };
 
   render() {
+    console.log("Using 0.1");
     return (
       <div
         style={{

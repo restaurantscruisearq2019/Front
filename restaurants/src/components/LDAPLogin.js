@@ -41,7 +41,7 @@ class LDAPLogin extends React.Component {
 
   render() {
     const { userName, password } = this.state;
-    console.log(this.state);
+    //console.log(this.state);
 
     return (
       <Modal
@@ -86,7 +86,7 @@ class LDAPLogin extends React.Component {
 }
 
 const mapStateToProps = state => {
-  console.log(state.errors)
+  //console.log(state.errors)
   return {
     auth: state.auth.isAuthenticated,
     error: state.errors

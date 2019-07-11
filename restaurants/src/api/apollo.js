@@ -4,7 +4,7 @@ import { HttpLink, createHttpLink } from "apollo-link-http";
 
 export default new ApolloClient({
   //uri: "http://localhost:5000/graphql",
-  uri: "api:5000/graphql",
+  uri: "/graphql",
   request: async operation => {
     const token = await localStorage.getItem("jwtToken");
     operation.setContext({
@@ -21,6 +21,6 @@ export default new ApolloClient({
 }); */
 
 export const apolloAuth = new ApolloClient({
-  uri: "api:5000/auth"
+  uri: "/auth"
   //uri: "http://localhost:5000/auth"
 });
